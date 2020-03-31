@@ -1,0 +1,724 @@
+RESUCUE
+
+
+
+
+public class RescueAnimal {
+  // Class variables
+  private String name;
+  private String type;
+  private String gender;
+  private int age;
+  private float weight;
+  private SimpleDateFormat acquisitionDate;
+  private SimpleDateFormat statusDate;
+  private String acquisitionSource;
+  private Boolean reserved;
+  private String trainingLocation;
+  private SimpleDateFormat trainingStart;
+  private SimpleDateFormat trainingEnd;
+  private String trainingStatus;
+  private String inServiceCountry;
+  private String inServiceCity;
+  private String inServiceAgency;
+  private String inServicePOC;
+  private String inServiceEmail;
+  private String inServicePhone;
+  private String inServicePostalAddress;
+  // Constructor
+  public RescueAnimal() {
+  }
+  
+  //Getter and setter methods
+  public String getName() {
+     return name;
+  }
+  public void setName(String name) {
+     this.name = name;
+  }
+  public String getType() {
+     return type;
+  }
+  public void setType(String type) {
+     this.type = type;
+  }
+  public String getGender() {
+     return gender;
+  }
+  public void setGender(String gender) {
+     this.gender = gender;
+  }
+  public int getAge() {
+     return age;
+  }
+  public void setAge(int age) {
+     this.age = age;
+  }
+  public float getWeight() {
+     return weight;
+  }
+  public void setWeight(float weight) {
+     this.weight = weight;
+  }
+  public SimpleDateFormat getAcquisitionDate() {
+     return acquisitionDate;
+  }
+  public void setAcquisitionDate(SimpleDateFormat acquisitionDate) {
+     this.acquisitionDate = acquisitionDate;
+  }
+  public SimpleDateFormat getStatusDate() {
+     return statusDate;
+  }
+  public void setStatusDate(SimpleDateFormat statusDate) {
+     this.statusDate = statusDate;
+  }
+  public String getAcquisitionSource() {
+     return acquisitionSource;
+  }
+  public void setAcquisitionSource(String acquisitionSource) {
+     this.acquisitionSource = acquisitionSource;------------------
+  }
+  public Boolean getReserved() {
+     return reserved;
+  }
+  public void setReserved(Boolean reserved) {
+     this.reserved = reserved;
+  }
+  public String getTrainingLocation() {
+     return trainingLocation;
+  }
+  public void setTrainingLocation(String trainingLocation) {
+     this.trainingLocation = trainingLocation;
+  }
+  public SimpleDateFormat getTrainingStart() {
+     return trainingStart;
+  }
+  public void setTrainingStart(SimpleDateFormat trainingStart) {
+     this.trainingStart = trainingStart;
+  }
+  public SimpleDateFormat getTrainingEnd() {
+     return trainingEnd;
+  }
+  public void setTrainingEnd(SimpleDateFormat trainingEnd) {
+     this.trainingEnd = trainingEnd;
+  }
+  public String getTrainingStatus() {
+     return trainingStatus;
+  }
+  public void setTrainingStatus(String trainingStatus) {
+     this.trainingStatus = trainingStatus;
+  }
+  public String getInServiceCountry() {
+     return inServiceCountry;
+  }
+  public void setInServiceCountry(String inServiceCountry) {
+     this.inServiceCountry = inServiceCountry;
+  }
+  public String getInServiceCity() {
+     return inServiceCity;
+  }
+  public void setInServiceCity(String inServiceCity) {
+     this.inServiceCity = inServiceCity;
+  }
+  public String getInServiceAgency() {
+     return inServiceAgency;
+  }
+  public void setInServiceAgency(String inServiceAgency) {
+     this.inServiceAgency = inServiceAgency;
+  }
+  public String getInServicePOC() {
+     return inServicePOC;
+  }
+  public void setInServicePOC(String inServicePOC) {
+     this.inServicePOC = inServicePOC;
+  }
+  public String getInServiceEmail() {
+     return inServiceEmail;
+  }
+  public void setInServiceEmail(String inServiceEmail) {
+     this.inServiceEmail = inServiceEmail;
+  }
+  public String getInServicePhone() {
+     return inServicePhone;
+  }
+  public void setInServicePhone(String inServicePhone) {
+     this.inServicePhone = inServicePhone;
+  }
+  public String getInServicePostalAddress() {
+     return inServicePostalAddress;
+  }
+  public void setInServicePostalAddress(String inServicePostalAddress) {
+     this.inServicePostalAddress = inServicePostalAddress;
+  }
+}
+
+
+
+MONKEY
+
+
+
+
+
+public class Monkey extends RescueAnimal{
+    enum Species{
+        CAPUCHIN,GUENON,MACAQUE,MARMOSET,SQUIRRELMONKEY,TAMARIN;
+    }
+    private float taillength,height,bodyLength,torsoLength,skullLength,neckLength;
+    Species species;
+
+    public float getTaillength() {
+        return taillength;
+    }
+
+    public void setTaillength(float taillength) {
+        this.taillength = taillength;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public float getBodyLength() {
+        return bodyLength;
+    }
+
+    public void setBodyLength(float bodyLength) {
+        this.bodyLength = bodyLength;
+    }
+
+    public float getTorsoLength() {
+        return torsoLength;
+    }
+
+    public void setTorsoLength(float torsoLength) {
+        this.torsoLength = torsoLength;
+    }
+
+    public float getSkullLength() {
+        return skullLength;
+    }
+
+    public void setSkullLength(float skullLength) {
+        this.skullLength = skullLength;
+    }
+
+    public float getNeckLength() {
+        return neckLength;
+    }
+
+    public void setNeckLength(float neckLength) {
+        this.neckLength = neckLength;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(Species species) {
+        this.species = species;
+    }
+}
+
+
+
+
+
+DRIVERS
+
+
+=================================================================================
+
+
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+//Lis
+public class Driver {
+   static List<RescueAnimal> list = new ArrayList<>();
+    public static void main(String[] args) {
+
+        // Class variables
+
+        // Create New Dog
+        Dog d = new Dog();
+
+        // Create New Monkey
+        Monkey m = new Monkey();
+
+        // Method to process request for a rescue animal
+        RescueAnimal animal = getARescueAnimal();
+
+        // Method(s) to update information on existing animals
+        updateAnimal(animal);
+        list.add(animal);
+        // Method to display matrix of aninmals based on location and status/training phase
+        updateAnimal(animal);
+        // Method to add animals
+
+        // Method to out process animals for the farm or in-service placement
+
+        // Method to display in-service animals
+
+        // Process reports from in-service agencies reporting death/retirement
+        printAll();
+
+
+    }
+    public static void printAll() {
+        for (RescueAnimal a:list){
+            System.out.println(a);
+        }
+
+    }
+    public static void displayBasedOnLoc(){
+        String temp;
+        System.out.println("Enter the location to search");
+        Scanner sc = new Scanner(System.in);
+        temp = sc.next();
+        for (RescueAnimal a:list){
+            if(a.getTrainingLocation().equals(temp)){
+                System.out.println(a);
+            }
+        }
+
+    }
+    public static void displaBasedOnTraining(){
+        String temp;
+        System.out.println("Enter the status of training to search");
+        Scanner sc = new Scanner(System.in);
+        temp = sc.next();
+        for (RescueAnimal a:list){
+            if(a.getTrainingStatus().equals(temp)){
+                System.out.println(a);
+            }
+        }
+    }
+    public static void updateAnimal(RescueAnimal r) {
+        Scanner sc = new Scanner(System.in);
+        int choice = 0;
+        boolean loop = true;
+        do {
+            System.out.println("Enter 1 for Name Update");
+            System.out.println("Enter 2 for type Update");
+            System.out.println("Enter 3 for updating gender");
+            System.out.println("Enter 4 age Update");
+            System.out.println("Update 5 weight update");
+            System.out.println("update acquisition Date:Format:6: ");
+            System.out.println("update trainingStart Date:Format: 7: ");
+            System.out.println("update trainingend Date:8 ");
+            System.out.println("trainingStatus 9");
+            System.out.println("InServiceCountry 10");
+            System.out.println("InServiceCity 11");
+            System.out.println("INServiceAg 12");
+            System.out.println("InServPOC 13");
+            System.out.println("Reserved?True:False 14");
+            System.out.println("acq source 15");
+//            r.setAcquisitionSource(sc.next());
+            System.out.println("In Service Email 16");
+            System.out.println("17 to exit");
+            choice = sc.nextInt();
+            while (choice < 0 && choice > 18) {
+                choice = sc.nextInt();
+            }
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter name");
+                    r.setName(sc.next());
+                    break;
+                case 2:
+                    System.out.println("enter type");
+                    r.setType(sc.next());
+                    break;
+                case 3:
+                    System.out.println("enter gender");
+                    r.setGender(sc.next());
+                    break;
+                case 4:
+                    System.out.println("Enter age");
+                    r.setAge(sc.nextInt());
+                    break;
+                case 5:
+                    System.out.println("enter weight");
+                    r.setWeight(sc.nextFloat());
+                    break;
+                case 6:
+                    System.out.println("ACq date");
+                    r.setAcquisitionDate(LocalDate.parse(sc.next()));
+                    break;
+                case 7:
+                    System.out.println("Enter Tr st date");
+                    r.setTrainingStart(LocalDate.parse(sc.next()));
+                    break;
+                case 8:
+                    System.out.println("enter tr end dt");
+                    r.setTrainingEnd(LocalDate.parse(sc.next()));
+                    break;
+
+                case 9:
+                    System.out.println("enter tr stat");
+                    r.setTrainingStatus(sc.next());
+                    break;
+                case 10:
+                    System.out.println("Enter country inservice");
+                    r.setInServiceCountry(sc.next());
+                    break;
+                case 11:
+                    System.out.println("Enter serv city");
+                    r.setInServiceCity(sc.next());
+                    break;
+                case 12:
+                    System.out.println("Enter agency");
+                    r.setInServiceAgency(sc.next());
+                    break;
+                case 13:
+                    System.out.println("Enter poc");
+                    r.setInServicePOC(sc.next());
+                    break;
+                case 14:
+                    System.out.println("Enter reserved:true:false");
+                    r.setReserved(sc.nextBoolean());
+                    break;
+                case 15:
+                    System.out.println("Enter acq souce");
+                    r.setAcquisitionSource(sc.next());
+                    break;
+                case 16:
+                    System.out.println("Enter email");
+                    r.setInServiceEmail(sc.next());
+                    break;
+                case 17:
+                    System.out.println("Exiting:");
+                    return;
+//                    break;
+            }
+        } while (loop);
+    }
+
+    public static RescueAnimal getARescueAnimal() {
+        RescueAnimal r = new RescueAnimal();
+        rescueAnimal(r);
+        return r;
+    }
+
+    public static void rescueAnimal(RescueAnimal r) {
+//        RescueAnimal r = new RescueAnimal();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Name");
+        r.setName(sc.next());
+        System.out.println("Enter type");
+        r.setType(sc.next());
+        System.out.println("Enter gender");
+        r.setGender(sc.next());
+        System.out.println("Enter age");
+        r.setAge(sc.nextInt());
+        System.out.println("weight?");
+        r.setWeight(sc.nextFloat());
+        System.out.println("Enter acquisition Date:Format: yyyy-mm-dd: ");
+        r.setAcquisitionDate(LocalDate.parse(sc.next()));
+        System.out.println("Enter trainingStart Date:Format: yyyy-mm-dd: ");
+        r.setTrainingStart(LocalDate.parse(sc.next()));
+        System.out.println("Enter trainingend Date:Format: yyyy-mm-dd: ");
+        r.setTrainingEnd(LocalDate.parse(sc.next()));
+        System.out.println("trainingStatus");
+        r.setTrainingStatus(sc.next());
+        System.out.println("InServiceCountry");
+        r.setInServiceCountry(sc.next());
+        System.out.println("InServiceCity");
+        r.setInServiceCity(sc.next());
+        System.out.println("INServiceAg");
+        r.setInServiceAgency(sc.next());
+        System.out.println("InServPOC");
+        r.setInServicePOC(sc.next());
+        System.out.println("Reserved?True:False");
+        r.setReserved(sc.nextBoolean());
+        System.out.println("acq source");
+        r.setAcquisitionSource(sc.next());
+        System.out.println("In Service Email");
+        r.setInServiceEmail(sc.next());
+        //goes on....
+
+    }
+}
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+
+public class RescueAnimal {
+
+    // Class variables
+    private String name,type,gender;
+    private int age;
+    private float weight;
+    private LocalDate acquisitionDate,statusDate;
+    private String acquisitionSource;
+    private Boolean reserved;
+    private String trainingLocation;
+    private LocalDate trainingStart;
+    private LocalDate trainingEnd;
+    private String trainingStatus,inServiceCountry,inServiceCity,inServiceAgency,inServicePOC,inServiceEmail,inServicePhone,inServicePostalAddress;
+    // Constructor
+    public RescueAnimal() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public float getWeight() {
+        return weight;
+
+    }
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public LocalDate getAcquisitionDate() {
+        return acquisitionDate;
+    }
+
+    public void setAcquisitionDate(LocalDate acquisitionDate) {
+        this.acquisitionDate = acquisitionDate;
+    }
+
+    public LocalDate getStatusDate() {
+        return statusDate;
+    }
+
+    public void setStatusDate(LocalDate statusDate) {
+        this.statusDate = statusDate;
+    }
+
+    public String getAcquisitionSource() {
+        return acquisitionSource;
+    }
+
+    public void setAcquisitionSource(String acquisitionSource) {
+        this.acquisitionSource = acquisitionSource;
+    }
+
+    public Boolean getReserved() {
+        return reserved;
+    }
+
+    public void setReserved(Boolean reserved) {
+        this.reserved = reserved;
+    }
+
+    public String getTrainingLocation() {
+        return trainingLocation;
+    }
+
+    public void setTrainingLocation(String trainingLocation) {
+        this.trainingLocation = trainingLocation;
+    }
+
+    public LocalDate getTrainingStart() {
+        return trainingStart;
+    }
+
+    public void setTrainingStart(LocalDate trainingStart) {
+        this.trainingStart = trainingStart;
+    }
+
+    public LocalDate getTrainingEnd() {
+        return trainingEnd;
+    }
+
+    public void setTrainingEnd(LocalDate trainingEnd) {
+        this.trainingEnd = trainingEnd;
+    }
+
+    public String getTrainingStatus() {
+        return trainingStatus;
+    }
+
+    public void setTrainingStatus(String trainingStatus) {
+        this.trainingStatus = trainingStatus;
+    }
+
+    public String getInServiceCountry() {
+        return inServiceCountry;
+    }
+
+    public void setInServiceCountry(String inServiceCountry) {
+        this.inServiceCountry = inServiceCountry;
+    }
+
+    public String getInServiceCity() {
+        return inServiceCity;
+    }
+
+    public void setInServiceCity(String inServiceCity) {
+        this.inServiceCity = inServiceCity;
+    }
+
+    public String getInServiceAgency() {
+        return inServiceAgency;
+    }
+
+    public void setInServiceAgency(String inServiceAgency) {
+        this.inServiceAgency = inServiceAgency;
+    }
+
+    public String getInServicePOC() {
+        return inServicePOC;
+    }
+
+    public void setInServicePOC(String inServicePOC) {
+        this.inServicePOC = inServicePOC;
+    }
+
+    public String getInServiceEmail() {
+        return inServiceEmail;
+    }
+
+    public void setInServiceEmail(String inServiceEmail) {
+        this.inServiceEmail = inServiceEmail;
+    }
+
+    public String getInServicePhone() {
+        return inServicePhone;
+    }
+
+    public void setInServicePhone(String inServicePhone) {
+        this.inServicePhone = inServicePhone;
+    }
+
+    public String getInServicePostalAddress() {
+        return inServicePostalAddress;
+    }
+
+    public void setInServicePostalAddress(String inServicePostalAddress) {
+        this.inServicePostalAddress = inServicePostalAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "RescueAnimal{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", acquisitionDate=" + acquisitionDate +
+                ", statusDate=" + statusDate +
+                ", acquisitionSource='" + acquisitionSource + '\'' +
+                ", reserved=" + reserved +
+                ", trainingLocation='" + trainingLocation + '\'' +
+                ", trainingStart=" + trainingStart +
+                ", trainingEnd=" + trainingEnd +
+                ", trainingStatus='" + trainingStatus + '\'' +
+                ", inServiceCountry='" + inServiceCountry + '\'' +
+                ", inServiceCity='" + inServiceCity + '\'' +
+                ", inServiceAgency='" + inServiceAgency + '\'' +
+                ", inServicePOC='" + inServicePOC + '\'' +
+                ", inServiceEmail='" + inServiceEmail + '\'' +
+                ", inServicePhone='" + inServicePhone + '\'' +
+                ", inServicePostalAddress='" + inServicePostalAddress + '\'' +
+                '}';
+    }
+}
+
+
+newwwww
+
+
+
+
+public class Monkey extends RescueAnimal{
+    enum Species{
+        CAPUCHIN,GUENON,MACAQUE,MARMOSET,SQUIRRELMONKEY,TAMARIN;
+    }
+    private float taillength,height,bodyLength,torsoLength,skullLength,neckLength;
+    Species species;
+
+    public float getTaillength() {
+        return taillength;
+    }
+
+    public void setTaillength(float taillength) {
+        this.taillength = taillength;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public float getBodyLength() {
+        return bodyLength;
+    }
+
+    public void setBodyLength(float bodyLength) {
+        this.bodyLength = bodyLength;
+    }
+
+    public float getTorsoLength() {
+        return torsoLength;
+    }
+
+    public void setTorsoLength(float torsoLength) {
+        this.torsoLength = torsoLength;
+    }
+
+    public float getSkullLength() {
+        return skullLength;
+    }
+
+    public void setSkullLength(float skullLength) {
+        this.skullLength = skullLength;
+    }
+
+    public float getNeckLength() {
+        return neckLength;
+    }
+
+    public void setNeckLength(float neckLength) {
+        this.neckLength = neckLength;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(Species species) {
+        this.species = species;
+    }
+}

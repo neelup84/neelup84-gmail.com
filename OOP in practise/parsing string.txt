@@ -1,0 +1,45 @@
+Scanner in = new Scanner(System.in);
+        String name, firstName, lastName;
+        String[] words;
+        while (true) {
+            while (true) {
+                System.out.println("Enter input string: ");
+                name = in.nextLine();
+                if(name.equals("q")) {
+                    return;
+                }
+                if(name.contains(",")) {
+                    break;
+                }
+                System.out.println("Error: No comma in string.");
+            }
+            words = name.split(",");
+            firstName = words[0].trim();
+            lastName = words[1].trim();
+            System.out.println("First word: " + firstName);
+            System.out.println("Second word: " + lastName);
+            System.out.println();
+
+----------------------------------------------------------------------------------
+
+Scanner scan = new Scanner(System.in);
+       while(true){
+       System.out.print("Enter input string: ");
+       String s = scan.nextLine();
+       if(s.equalsIgnoreCase("q")){
+           break;
+       }
+       else if(!s.contains(",")){
+           System.out.println("Error: No comma in string");
+       }
+       else{
+           String firstWord = s.split(",")[0].trim();
+           String secondWord = s.split(",")[1].trim();
+           System.out.println("First word: "+firstWord);
+           System.out.println("Second word: "+secondWord);
+       }
+      
+       }
+   return;
+   }
+   }

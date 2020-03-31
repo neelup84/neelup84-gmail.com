@@ -1,0 +1,70 @@
+public static void printShampooInstructions(int numCycles) {
+if(numCycles<0)
+System.out.println("Too few..");
+
+// If numCycles is greater than 4
+//then exexute else block
+else if(numCycles>4)
+System.out.println("Too many..");
+else
+{
+int i=0;
+while(i!=numCycles)
+{
+// Increment i value with one
+i++;
+System.out.println(i+": Lather and rinse");
+  
+}
+//Display statement
+System.out.println("Done..");
+  
+}
+}
+
+
+courseGrades[0] = 7;
+courseGrades[1] = 9;
+courseGrades[2] = 11;
+courseGrades[3] = 10;
+
+
+
+
+         //Error 1: The error is print. It should be either println or print.
+
+          System.out.println("Predictions are hard.");
+
+          //Error 2: The error is single quotes.
+
+          //The output statements must be in the double quotes.
+
+          System.out.print("Especially ");
+
+          //Error 3: The error is fullstop in the ending of the statement.
+
+          //Every statement must be end with a semicolon.
+
+          System.out.println("about the future.");
+
+          //Error 3: The error is minus symbol.
+
+          //It must be plus symbol to print the value of the userNum.
+
+          System.out.println("Num is: " +userNum);
+
+         
+
+          return;
+
+     }
+
+
+
+
+ System.out.println("Num: " + songNum);
+
+        System.out.println(songNum);
+
+        System.out.println(songNum + " songs");
+}
